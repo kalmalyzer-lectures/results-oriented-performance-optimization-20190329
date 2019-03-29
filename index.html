@@ -105,7 +105,21 @@ Repeat.
 
 ---
 
+# Tips when establishing goals
+
+Make napkin estimations for what a reasonable goal would be.
+
+Work backwards from physical constraints.
+- What is the RAM throughput of your system?
+- How many instructions/second can the CPU in your system process?
+- What is the bandwidth of the network interface in your machine?
+- What is the read throughput of a DVD drive?
+
+---
+
 # Tips when measuring metrics
+
+If you cannot measure the metric directly, pick a metric that you can measure, that correlates positively to the one you want to optimize.
 
 When you measure it, write it down. _Always._
 
@@ -113,13 +127,19 @@ If you measure the same thing many times, automate measurement + logging.
 
 ---
 
+# This dilemma always comes up
+
+Change algorithm, or improve the existing implementation?
+
+---
+
 # Performance Profiling Tools
 
 * Task Manager
 * ETW
-* Visual Studio
 * Brofiler / Orbit Profiler
 * Very Sleepy
+* VTune
 * Visual Studio's profiler
 * Unity/Unreal's built-in profilers
 * Console specific profilers
