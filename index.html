@@ -34,37 +34,125 @@ mikael@kalms.org
 
 # Purpose of this session
 
-
-
----
-
-multidimensional optimization problem
-
-measure
-find out a direction to move in
+We will practice optimization in a structured manner.
 
 ---
 
-concept of a "metric"
+# What is optimization?
 
-pick/create a metric that is useful to you
-change
-measure how the metric has changed
+Optimization is the process of improving something.
+
+How do you tell if something has improved?
+
+It helps to have a **goal** to compare against.
+
+It helps to have a **metric**, to measure progress toward the goal.
 
 ---
 
-tools
+# Examples of goals + metrics
 
-Task Manager
-ETW
-Visual Studio
-Brofiler / Orbit Profiler
-Very Sleepy
-std::time()
-hook malloc()
-count things yourself
+Any level in the game should load in <30 seconds on PS4.
 
+The particle system must never use more than 300MB RAM.
 
+The fog and mist should take <1ms but still look decent.
+
+The game should be <1GB on-disk, decompression can use max 10MB temp RAM, load times can increase with <20%.
+
+---
+
+# Optimization is a tradeoff
+
+Sometimes, improving one aspect helps in other aspects as well.
+
+Sometimes, improving one aspect worsens another aspect.
+
+---
+
+# The "engineering definition" of optimization
+
+"Make changes to a system...
+
+...to reach an optimal balance between conflicting parameters...
+
+...while observing hard constraints"
+
+---
+
+# What is a metric?
+
+It is something that you can measure. Examples:
+
+* load time for a level
+* max memory usage during a play session
+* Average packet transfer latency between two machines
+* user enjoyment (1 = low, 5 = high) when playing through a level
+
+---
+
+# How to perform software optimization
+
+Pick a goal.
+
+Pick a metric that is relevant.
+
+Change the code.
+
+Measure how the metric has changed.
+
+Repeat.
+
+---
+
+# Tips when measuring metrics
+
+When you measure it, write it down. _Always._
+
+If you measure the same thing many times, automate measurement + logging.
+
+---
+
+# Performance Profiling Tools
+
+* Task Manager
+* ETW
+* Visual Studio
+* Brofiler / Orbit Profiler
+* Very Sleepy
+* Use std::chrono yourself
+* Visual Studio's profiler
+* Unity/Unreal's built-in profilers
+* Console specific profilers
+
+---
+
+# Memory profiling tools
+
+* Task Manager
+* ETW
+* mtuner
+* Hook malloc / global new yourself
+* Visual Studio's profiler
+* Unity/Unreal's built-in profilers
+* Console specific profilers
+
+---
+
+# Network profiling tools
+
+* Task Manager
+* ETW
+* Wireshark
+* Write your own
+
+---
+
+# Disk profiling tools
+
+* Task Manager
+* ETW
+* Write your own
 
 
 
